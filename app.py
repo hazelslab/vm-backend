@@ -4,7 +4,7 @@ from flask_socketio import SocketIO, send
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'mysecret'
-socketio = SocketIO(app, host='46.101.167.176', port=5000)  # IP-Adresse deiner VM und Port 5000
+socketio = SocketIO(app, host='0.0.0.0', port=5000)  # IP-Adresse deiner VM und Port 5000
 
 @socketio.on('message')
 def handleMessage(msg):
